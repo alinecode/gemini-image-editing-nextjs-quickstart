@@ -55,7 +55,7 @@ export function ImageUpload({ onImageSelect, currentImage, onError }: ImageUploa
         }
         setIsLoading(false);
       };
-      reader.onerror = (_error) => {
+      reader.onerror = () => {
         onError?.("Error reading file. Please try again.");
         setIsLoading(false);
       };
